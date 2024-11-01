@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-11-01T17:50:12.352171" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="I:\Programação\QAx\projects\smartbit-robot\tests\signup.robot">
+<test id="s1-t1" name="Deve iniciar o cadastro do cliente" line="9">
+<kw name="Get Fake Account" owner="Account">
+<msg time="2024-11-01T17:50:13.218724" level="INFO">${account} = {'name': 'João Pedro Lopes', 'email': 'lmendes@example.net', 'cpf': '856.403.127-26'}</msg>
+<var>${account}</var>
+<status status="PASS" start="2024-11-01T17:50:13.218724" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2024-11-01T17:50:13.219233" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "I:\\Programa\u00e7\u00e3o\\QAx\\projects\\smartbit-robot\\logs\\browser\\traces\\85aaa3b1-5f76-4584-9624-4aca248930d4"}</msg>
+<msg time="2024-11-01T17:50:13.850878" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"I:\\Programação\\QAx\\projects\\smartbit-robot\\logs\\browser\\traces\\85aaa3b1-5f76-4584-9624-4aca248930d4"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-11-01T17:50:13.218724" elapsed="0.632154"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-11-01T17:50:14.421499" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/</msg>
+<msg time="2024-11-01T17:50:14.421499" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:3000/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-11-01T17:50:13.851382" elapsed="0.570117"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-01T17:50:14.451302" level="INFO">Text: 'Faça seu cadastro e venha para a Smartbit!'</msg>
+<arg>css=#signup h2</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro e venha para a Smartbit!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-01T17:50:14.422566" elapsed="0.028736"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-01T17:50:14.452310" level="INFO">Fills the text 'João Pedro Lopes' in the given field.</msg>
+<arg>id=name</arg>
+<arg>${account}[name]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-01T17:50:14.451302" elapsed="0.010140"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-01T17:50:14.462453" level="INFO">Fills the text 'lmendes@example.net' in the given field.</msg>
+<arg>id=email</arg>
+<arg>${account}[email]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-01T17:50:14.461442" elapsed="0.010124"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-01T17:50:14.471566" level="INFO">Fills the text '856.403.127-26' in the given field.</msg>
+<arg>id=cpf</arg>
+<arg>${account}[cpf]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-01T17:50:14.471566" elapsed="0.008577"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-01T17:50:14.480646" level="INFO">Clicks the element 'css=button &gt;&gt; text=Cadastrar'.</msg>
+<arg>css=button &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-01T17:50:14.480143" elapsed="0.037904"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-01T17:50:16.867350" level="INFO">Waited for Element with selector text=Falta pouco para fazer parte da família Smartbit! at state visible</msg>
+<arg>text=Falta pouco para fazer parte da família Smartbit!</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-01T17:50:14.518047" elapsed="2.350314"/>
+</kw>
+<status status="PASS" start="2024-11-01T17:50:13.216200" elapsed="3.652161"/>
+</test>
+<doc>Cenários de testes de pré-cadastro de clientes</doc>
+<status status="PASS" start="2024-11-01T17:50:12.353177" elapsed="4.551120"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Signup">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
