@@ -3,7 +3,7 @@ Documentation        Teste para verificar o slogan da SmartBit na Aplicaçãop W
 
 Library    Browser
 
-*** Test Case ***
+*** Test Cases ***
 Deve Exibir o Slogan na Landing Page
     New Browser    browser=chromium    headless=false
     New Page    http://localhost:3000/

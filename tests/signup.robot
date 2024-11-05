@@ -12,20 +12,15 @@ Deve iniciar o cadastro do cliente
     ${account}     Get Fake Account
 
     Submit signup form    ${account} 
+    Verify welcome message
 
-    Wait For Elements State    text=Falta pouco para fazer parte da família Smartbit!    
-    ...    visible    
-    ...    5
-
-
-  
 Tentativa de pré-cadastro
     [Template]    Attempt signup
     ${EMPTY}            marcilio@teste.com    25917080100    Por favor informe o seu nome completo
     marcilio borges     ${EMPTY}              39311430153    Por favor, informe o seu melhor e-mail 
     isaina cristina     isaina@teste.com      ${EMPTY}       Por favor, informe o seu CPF 
     isabel pereira      isabel.teste.com      39311430153    Oops! O email informado é inválido
-    Lucas Henrique      lucas@teste.com       3931143015A    Oops! O email informado é inválido           
+    Lucas Henrique      lucas@teste.com       3931143015A    Oops! O CPF informado é inválido          
 
 *** Keywords ***
 Attempt signup
@@ -33,7 +28,7 @@ Attempt signup
 
     ${account}    Create Dictionary
     ...    name=${name} 
-    ...    email=l${email}
+    ...    email=${email}
     ...    cpf=${cpf}
 
     Submit signup form    ${account}
