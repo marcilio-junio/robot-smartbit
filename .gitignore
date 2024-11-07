@@ -1,2 +1,10 @@
 logs
+logs/browser
 __pycache__
+log.html
+output.xml
+report.html
+playwright-log.txt
+venv*
+.venv*
+.env
