@@ -8,3 +8,5 @@ playwright-log.txt
 venv*
 .venv*
 .env
+temp.html
+interactive_console_output.xml
