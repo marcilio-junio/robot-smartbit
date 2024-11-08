@@ -1,0 +1,78 @@
+{
+    "create":{
+        "account":{
+            "name": "Paulo Cintura",
+            "email": "paulo@cintura.com.br",
+            "cpf": "44346140025"
+        },
+        "plan": {
+            "name": "Plano Smart",
+            "id": 2 ,
+            "price": 99.99
+        },
+        "credit_card":{
+            "number": "4242424242424242",
+            "holder": "Paulo Cintura",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    },
+    "duplicate":{
+        "account":{
+            "name": "Erinete Matos",
+            "email": "erinete@matos.com.br",
+            "cpf": "26395623044"
+        },
+        "plan": {
+            "name": "Plano Smart",
+            "id": 1,
+            "price": 79.99
+        },
+        "credit_card":{
+            "number": "4242424242424242",
+            "holder": "Erinete Matos",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    },
+    "search":{
+        "account":{
+            "name": "Maria dos Anjos",
+            "email": "maria@anjos.com.br",
+            "cpf": "69618079090"
+        },
+        "plan": {
+            "name": "Plano Smart",
+            "id": 1,
+            "price": 79.99
+        },
+        "credit_card":{
+            "number": "4242424242424242",
+            "holder": "Maria dos Anjos",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    },
+    "remove":{
+        "account":{
+            "name": "Carlos Henrique",
+            "email": "carlos@henrique.com.br",
+            "cpf": "74425560000"
+        },
+        "plan": {
+            "name": "Plano Smart",
+            "id": 2,
+            "price": 99.99
+        },
+        "credit_card":{
+            "number": "4242424242424242",
+            "holder": "Carlos Henrique",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    }       
+}
